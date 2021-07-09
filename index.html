@@ -29,6 +29,7 @@ body {
   height: 100vh;
   background-image: url(stage1.jpg);
   background-attachment: fixed;
+  background-repeat: no-repeat;
 
 }
 
@@ -125,10 +126,10 @@ body {
   opacity: 0;
   z-index: -1;
 }
-.card:active .front {
+.card:hover .front {
   transform: rotateY(180deg);
 }
-.card:nth-child(even):active .front {
+.card:nth-child(even):hover .front {
   transform: rotateY(-180deg);
 }
 
@@ -145,7 +146,7 @@ body {
   box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
   background-color: rgba(26, 87, 230, 0.25);
 }
-.card:active .back {
+.card:hover .back {
   transform: rotateY(0deg);
 }
 .card:nth-child(even) .back {
@@ -158,7 +159,7 @@ body {
   box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
   background-color: rgba(230, 26, 60, 0.25);
 }
-.card:nth-child(even):active .back {
+.card:nth-child(even):hover .back {
   transform: rotateY(0deg);
 }
 
@@ -191,19 +192,7 @@ body {
   left: 10px;
   top: 16px;
 }
-.button:active {
-  transform: translateZ(55px);
-}
-.button:active:before {
-  transform: translateZ(-55px);
-}
-.button:active {
-  transform: translateZ(20px);
-}
-.button:active:before {
-  transform: translateZ(-20px);
-  top: 12px;
-}
+
 
 
 
