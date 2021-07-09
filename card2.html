@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <style type="text/css">
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: darkblue;
+  font-family: "cambria", sans-serif;
+}
+
+p{
+  font-size: 48px;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url(stage1.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+}
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+}
+
+.heading {
+  font-family: "cambria";
+
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1ch;
+  line-height: 1;
+  padding-bottom: .5em;
+  position: relative;
+}
+
+
+.description {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  color: black;
+  cursor: pointer;
+  width: calc(20% - 1rem);
+  min-width: calc(20% - 1rem);
+  height: 300px;
+  min-height: 300px;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+}
+
+.front {
+  background-size: cover;
+  padding: 1rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+.front:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+  opacity: 0;
+  z-index: -1;
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even):hover .front {
+  transform: rotateY(-180deg);
+}
+
+.back {
+  overflow: hidden;
+  background: #fff;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+.back .button {
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+}
+.back .button:before {
+  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+  background-color: rgba(26, 87, 230, 0.25);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+.card:nth-child(even) .back {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even) .back .button {
+  background: linear-gradient(135deg, #e61a80, #e61a3c);
+}
+.card:nth-child(even) .back .button:before {
+  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
+  background-color: rgba(230, 26, 60, 0.25);
+}
+.card:nth-child(even):hover .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  transform: translateZ(40px);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+.button:before {
+  transition: 300ms ease;
+  position: absolute;
+  display: block;
+  content: '';
+  transform: translateZ(-40px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 100px;
+  left: 10px;
+  top: 16px;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+  <h1 class="heading">ROUND 1</h1>
+  <a class="card" href="#!">
+    <div class="front" style="background-image: url(1.jpeg)">
+      <p>1</p>
+    </div>
+    <div class="back">
+      <div>
+      
+        <img style="width: 295px;" src="Nikunjcard.png"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(2.jpeg)">
+      <p>2</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="Praveencard.png"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(3.jpeg)">
+      <p>3</p>
+    </div>
+    <div class="back">
+      <div>
+        
+        <img style="width: 295px;" src="punitcard.png"/>
+       
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(1.jpeg)">
+      <p>4</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="Sarthakcard.png"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(2.jpeg)">
+      <p>5</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="Aishwaryacard.png"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(3.jpeg)">
+      <p>6</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="Ankitacard.png"/>
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>7</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="Arushicard.png"/>
+        
+      </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>8</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="Ayancard.png"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>9</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="nirmaljeetcard.png"/>
+        
+      </div>
+    </div>
+    <!--</a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>10</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="j.jpeg"/>
+              </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>11</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="k.jpeg"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>12</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="l.jpeg"/>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>13</p>
+    </div>
+    <div class="back">
+      <div>
+        <img style="width: 295px;" src="m.jpeg"/>
+        
+      </div>
+    </div></a>  -->
+
+
+    <!-- <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>14</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Say the dialogues in English “Jab yeh dhai kilo ka haath kisi pe padta hai toh aadmi uthta nahi, uth jaata hai”</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>15</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Say it 3 times “If you understand, say "understand".
+if you don't understand, say "don't understand".
+but if you understand and say "don't understand".
+how do I understand that you understand? understand!”
+</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(1.jpeg)">
+      <p>16</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Name 5 actors from the letter ‘I’ in 10 seconds</p>
+        <p></p>
+        
+      </div>
+    </div></a>
+    <a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>17</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Enact this in a happy tone “Meri biwi teri biwi, teri biwi teri biwi, meri bahen teri hone wali biwi, teri biwi meri behen, yeh har baar har aurat teri biwi aur meri behen bann jaati hai aur teri kismat kharab hai?”</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>18</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Guess the meaning -"आगे दौड़ पीछे चौड"</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(2.jpeg)">
+      <p>19</p>
+    </div>
+    <div class="back">
+      <div>
+        <p> Guess the meaning - "तेल देखो तेल की धार देखो"</p>
+        <p></p>
+        
+      </div>
+    </div></a><a class="card" href="#!">
+          <div class="front" style="background-image: url(3.jpeg)">
+      <p>20</p>
+    </div>
+    <div class="back">
+      <div>
+        <p>Guess the Gibberish: “ACE HEIGHT FORCE OAR RISE”</p>
+        <p></p>
+        
+      </div>
+    </div></a> -->
+
+</div>
+
+</body>
+</html>
